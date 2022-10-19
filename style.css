@@ -1,16 +1,64 @@
 /* hero background image */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 nav {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
+  width: 100%;
+  position: fixed !important;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #161a1d;
+  z-index: 1;
+}
+
+label {
+  z-index: 1;
+  color: white;
+  display: none !important;
+  transition: ;
+}
+
+label:hover {
+  
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 32px;
+  flex-direction: row !important;
+  margin-right: 20px;
+}
+
+.nav-items {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-mobile {
+  display: none !important;
 }
 
 .bgimage {
   height:100vh;
-  background: url('https://images.unsplash.com/photo-1592890097722-926df3396ae4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(2, 2, 2, 0.3)), url('https://images.unsplash.com/photo-1592890097722-926df3396ae4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
   background-size:cover;
   position:relative;
 }
+
 /* text css above hero image*/
 .hero_title {
   font-size: 5.5rem;
@@ -37,13 +85,35 @@ nav {
   border-radius: 50%;
 }
 
-a.nav-link, a.navbar-brand {
+a.mainhome {
+  margin-left: 20px;
+}
+
+a.nav-links, a.mainhome {
+  text-decoration: none;
   color: white;
+  opacity: 1;
+  transition: color 200ms ease-in-out;
 } 
+
+a.nav-links:hover, a.mainhome:hover {
+  color: #dbdbdb !important;
+}
 
 .imageAboutPage {
   margin-bottom: 60px;
   box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.83);
   -webkit-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.83);
   -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.83);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    display: none !important;
+  }
+
+  label {
+    display: inline-block !important;
+    margin-right: 20px;
+  }
 }
