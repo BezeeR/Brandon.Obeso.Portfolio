@@ -23,14 +23,25 @@ nav {
   z-index: 1;
 }
 
-label {
+.toggle-button {
+  position: absolute;
   z-index: 1;
   color: white;
   display: none !important;
-  transition: ;
+  cursor: pointer;
+  top: 1.7rem;
+  right: 1rem;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30px;
+  height: 23px;
 }
 
-label:hover {
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
   
 }
 
@@ -44,12 +55,8 @@ label:hover {
 .nav-items {
   flex: 1;
   display: flex;
-  align-items: center;
   width: 100%;
-}
-
-.navbar-mobile {
-  display: none !important;
+  margin: 16px 0;
 }
 
 .bgimage {
@@ -79,25 +86,28 @@ label:hover {
   color: white;
 }
 
-/* about section image css */
-.imageAboutPage {
-  width: 100%;
-  border-radius: 50%;
-}
-
-a.mainhome {
-  margin-left: 20px;
+.mainhome {
+  margin-left: 10px !important;
 }
 
 a.nav-links, a.mainhome {
   text-decoration: none;
   color: white;
   opacity: 1;
-  transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 200ms;
+  padding: 10px;
+  margin: 5px 0 0 0;
 } 
 
 a.nav-links:hover, a.mainhome:hover {
   color: #dbdbdb !important;
+  background-color: #555;
+}
+
+/* about section image css */
+.imageAboutPage {
+  width: 100%;
+  border-radius: 50%;
 }
 
 .imageAboutPage {
@@ -107,13 +117,43 @@ a.nav-links:hover, a.mainhome:hover {
   -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.83);
 }
 
+/* Media Querry */
+
 @media screen and (max-width: 768px) {
   .navbar-nav {
     display: none !important;
+    margin-left: 10px;
+    flex-direction: column !important;
+    gap: 0;
+    width: 100%;
   }
-
-  label {
-    display: inline-block !important;
+  
+  .toggle-button {
+    display: flex !important;
     margin-right: 20px;
   }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .nav-items {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-items:first-of-type {
+    margin-top: 20px;
+  }
+
+  .navnav {
+    align-self: center !important;
+  }
+
+  .navbar-nav:active {
+    display: flex !important;
+  }
 }
+
