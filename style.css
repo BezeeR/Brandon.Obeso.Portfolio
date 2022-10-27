@@ -1,5 +1,5 @@
-/* hero background image */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -94,7 +94,7 @@ a.nav-links, a.mainhome {
   text-decoration: none;
   color: white;
   opacity: 1;
-  transition: color 200ms ease-in-out, background-color 200ms;
+  transition: color 200ms ease-in-out, background-color 200ms, border-radius 10px;
   padding: 10px;
   margin: 5px 0 0 0;
 } 
@@ -102,6 +102,7 @@ a.nav-links, a.mainhome {
 a.nav-links:hover, a.mainhome:hover {
   color: #dbdbdb !important;
   background-color: #555;
+  border-radius: 10px;
 }
 
 /* about section image css */
@@ -117,6 +118,78 @@ a.nav-links:hover, a.mainhome:hover {
   -moz-box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.83);
 }
 
+/* Contact Form */
+
+.contact-title {
+  text-align: center;
+  height: 70px;
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+}
+
+.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 15px;
+}
+
+ label {
+  height: 100%;
+  position: absolute;
+  left: -5;
+  top: 0;
+  padding: 10px;
+  color: black;
+  cursor: text;
+  transition: 0.2s;
+ }
+
+ .submit-button {
+  padding: 10px 0;
+  color: black;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 80px;
+ }
+
+ input:focus~label,
+ input:valid~label,
+ textarea:focus~label,
+ textarea:valid~label {
+  top: -35px;
+  font-size: 14px;
+ }
+
+ .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .row .input-group {
+  flex-basis: 48%;
+ }
 /* Media Querry */
 
 @media screen and (max-width: 768px) {
@@ -152,8 +225,9 @@ a.nav-links:hover, a.mainhome:hover {
     align-self: center !important;
   }
 
-  .navbar-nav:active {
+  .navnav:active {
     display: flex !important;
   }
+
 }
 

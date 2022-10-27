@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Portfolio Website-Bradon</title>
+  <title>Portfolio Website-Brandon</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- linking css file -->
@@ -13,10 +13,14 @@
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/cbcd6138e4.js" crossorigin="anonymous"></script>
+ 
 </head>
 
 <body>
+
  <!-- main banner -->
+
  <section class="bgimage" id="home">
     <nav class="navbar">
         <a class="mainhome" href="#home">Home</a>
@@ -26,7 +30,6 @@
                 <a class="nav-links nav-items" href="#projects">Projects</a>
                 <a class="nav-links nav-items contact-link" href="#contact">Contact</a>
             </ul>
-        
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -46,6 +49,7 @@
 </section>
 
 <!-- about section-->
+
 <section id="about">
   <div class="container mt-4 pt-4" id="aboutme">
       <h2 class="text-center">About Me</h2>
@@ -64,7 +68,6 @@
                           <li>Name: Brandon Obeso</li>
                           <li>Age: 27</li>
                           <li>Occupation: Web Developer</li>
-
                       </ul>
                   </div>
                   <div class="col-md-6">
@@ -85,6 +88,37 @@
               </div>
           </div>
       </div>
+</section>
+
+        <!-- Form Section -->
+
+<h4 class="contact-title">Contact Me</h4>
+
+<section class="form-wrapper">
+    <div id='contact'><a name='contact'></a></div>
+    
+    <form action="#">
+        <div class="row">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="phone" required>
+                <label for="phone"><i class="fa-solid fa-square-phone"></i> Phone No. </label>
+            </div>
+        </div>
+        <div class="input-group">
+            <input type="text" id="email" required>
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+        </div>
+        <div class="input-group">
+            <textarea id="message" rows="8" required></textarea>
+            <label for="message"><i class="fa-solid fa-comment"></i> Your Message</label>
+        </div>
+        <button class="submit-button" type="submit">Submit <i class="fa-solid fa-paper-plane"></i> </button>
+
+    </form>
 </section>
 
     <!-- load javascript after loading all html content -->
